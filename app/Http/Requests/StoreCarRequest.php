@@ -22,8 +22,8 @@ class StoreCarRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|string|max:255',
-            'color'=>'required|string|max:255'
+            'name'=>'nullable|string|max:255',
+            'color'=>'nullable|string|max:255'
         ];
     }
 }

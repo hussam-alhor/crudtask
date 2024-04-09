@@ -12,4 +12,9 @@ class Car extends Model
         'name',
         'color',
     ];
+
+public function products()
+ {
+return $this->hasMany(product::class);  
+ }    
 }

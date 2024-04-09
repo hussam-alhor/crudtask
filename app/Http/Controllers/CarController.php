@@ -17,10 +17,10 @@ class CarController extends Controller
      */
     public function index()
     {
-        $car = Car::all();
-        return response()->json()([
+        $cars = Car::with('products')->get();
+        return response()->json([
             'status'=> 'success',
-            'car'=>$car
+            'car'=>$cars
         ]);
     }
 
